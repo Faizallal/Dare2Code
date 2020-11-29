@@ -88,7 +88,12 @@ df.groupby('assignment_group').short_description.count().plot.bar(ylim=0)
 
 
 # In[15]:
-
+fig = plt.figure(figsize= (8,6))
+import seaborn as sns
+plt.figure(figsize=(10, 8))
+sns.countplot(y="assignment_group", data=df)
+plt.savefig("abc1.jpg",bbox_inches="tight")
+plt.show()
 
 from sklearn.feature_extraction.text import TfidfVectorizer
 
